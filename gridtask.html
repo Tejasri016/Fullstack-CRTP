@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            flex-wrap: wrap;
+            display: grid;
+            height: 100px;
+            row-gap: 10px;
+            height: 500px;
+            column-gap: 10px;
+            color: white;
+              text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: "header header header header header"
+            "sidebar content1 content1 content1 content1"
+            "sidebar content2 content2 content3 content3"
+            "footer footer footer footer footer";
+        }
+        .header{
+            grid-area: header;
+            background-color: orangered;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color:purple ;
+        }
+        .content1{
+            grid-area: content1;
+            background-color: rgb(125, 5, 25);
+        }
+        .content2{
+            grid-area: content2;
+            background-color: rgb(23, 83, 15);
+        }
+        .content3{
+            grid-area: content3;
+            background-color: rgb(23, 83, 15);
+        }
+        .footer{
+            grid-area:  footer;
+            background-color: rgb(240, 205, 3);
+        }
+        .container > *{
+          border: 2px solid black;
+          padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content1">Content 1</div>
+        <div class="content2">Content 2</div>
+        <div class="content3">Content 3</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
